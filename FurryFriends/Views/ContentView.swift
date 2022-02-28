@@ -23,15 +23,33 @@ struct ContentView: View {
             // Shows the main image
             RemoteImageView(fromURL: currentImage)
             
-            // Push main image to top of screen
-            Spacer()
+            Image(systemName: "heart.circle")
+                .font(.largeTitle)
+            
+            Button(action: {
+                print("I was pressed")
+            }, label: {
+                Text("Another one!")
+            })
+                .buttonStyle(.bordered)
 
+            HStack {
+                Text("Favourites")
+                    .bold()
+                    .font(.title)
+                Spacer()
+            }
+            
+            List {
+                Text("Placeholder")
+            }
+            
+            Spacer()
         }
         // Runs once when the app is opened
         .task {
             
             // Example images for each type of pet
-            let remoteCatImage = "https://purr.objects-us-east-1.dream.io/i/JJiYI.jpg"
             let remoteDogImage = "https://images.dog.ceo/breeds/labrador/lab_young.JPG"
             
             // Replaces the transparent pixel image with an actual image of an animal
@@ -40,6 +58,7 @@ struct ContentView: View {
                         
         }
         .navigationTitle("Furry Friends")
+        .padding()
         
     }
     
