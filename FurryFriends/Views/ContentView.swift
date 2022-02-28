@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored properties
+    @Environment(\.scenePhase) var scenePhrase
     
     // Address for main image
     // Starts as a transparent pixel – until an address for an animal's image is set
@@ -59,10 +60,21 @@ struct ContentView: View {
             
             Spacer()
         }
+        .onChange(of: scenePhrase) { newPhase in
+            if newPhase == .inactive {
+                print("Inactive")
+            } else if newPhase == .active {
+                print("Active")
+            } else if newPhase == .background {
+                print("Background")
+                persistFavourites()
+            }
+        }
         // Runs once when the app is opened
         .task {
             await loadNewImage()
             print("Have just attempted to load a new image.")
+            loadFavourite()
         }
         .navigationTitle("Furry Friends")
         .padding()
@@ -82,6 +94,36 @@ struct ContentView: View {
         } catch {
             print("Could not retrieve or decode the JSON from endpoint.")
             print(error)
+        }
+    }
+    
+    func persistFavourites() {
+        let filename = getDocumentsDirectory().appendingPathComponent(savedFavouritesLabel)
+        do {
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            let data = try encoder.encode(favourites)
+            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+            print("Saved data to documents directory successfully.")
+            print("===")
+            print(String(data: data, encoding: .utf8)!)
+        } catch {
+            print(error.localizedDescription)
+            print("Unable to write list of favourites to documents directory in app bundle on device.")
+        }
+    }
+    
+    func loadFavourite() {
+        let filename = getDocumentsDirectory().appendingPathComponent(savedFavouritesLabel)
+        print(filename)
+        do {
+            let data = try Data(contentsOf: filename)
+            print("Got data from file, contents are:")
+            print(String(data: data, encoding: .utf8)!)
+            favourites = try JSONDecoder().decode([DogImage].self, from: data)
+        } catch {
+            print(error.localizedDescription)
+            print("Could not load data from file, initializing with tasks provided to initializer.")
         }
     }
 }
