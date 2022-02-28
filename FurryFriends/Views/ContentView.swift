@@ -14,8 +14,9 @@ struct ContentView: View {
     // Address for main image
     // Starts as a transparent pixel – until an address for an animal's image is set
     @State var currentImage: DogImage = DogImage(message: "", status: "")
-    
+
     @State var favourites: [DogImage] = []
+    @State var currentImageAddedToFavourites: Bool = false
     
     // MARK: Computed properties
     var body: some View {
@@ -28,8 +29,12 @@ struct ContentView: View {
             Image(systemName: "heart.circle")
                 .font(.largeTitle)
                 .onTapGesture {
-                    favourites.append(currentImage)
+                    if currentImageAddedToFavourites == false {
+                        favourites.append(currentImage)
+                        currentImageAddedToFavourites = true
+                    }
                 }
+                .foregroundColor(currentImageAddedToFavourites == true ? .red : .secondary)
             
             Button(action: {
                 print("I was pressed")
@@ -73,6 +78,7 @@ struct ContentView: View {
         do {
             let (data, _) = try await urlSession.data(for: request)
             currentImage = try JSONDecoder().decode(DogImage.self, from: data)
+            currentImageAddedToFavourites = false
         } catch {
             print("Could not retrieve or decode the JSON from endpoint.")
             print(error)
