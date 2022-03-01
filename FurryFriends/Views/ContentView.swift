@@ -14,7 +14,7 @@ struct ContentView: View {
     
     // Address for main image
     // Starts as a transparent pixel – until an address for an animal's image is set
-    @State var currentImage: DogImage = DogImage(message: "", status: "")
+    @State var currentImage: DogImage = DogImage(message: "https://www.russellgordon.ca/lcs/miscellaneous/transparent-pixel.png", status: "")
 
     @State var favourites: [DogImage] = []
     @State var currentImageAddedToFavourites: Bool = false
