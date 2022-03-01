@@ -13,6 +13,7 @@
 		3AA4776F27CE922100603728 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4776E27CE922100603728 /* LottieView.swift */; };
 		3AA4777227CE92BB00603728 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA4777127CE92BB00603728 /* Lottie */; };
 		3AA4777427CE92EE00603728 /* ReactionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4777327CE92EE00603728 /* ReactionAnimationView.swift */; };
+		3AA4777627CE994A00603728 /* 2497-trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA4777527CE994A00603728 /* 2497-trophy.json */; };
 		8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */; };
 		8134B14727CA4862004DEB85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14627CA4862004DEB85 /* ContentView.swift */; };
 		8134B14927CA4863004DEB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8134B14827CA4863004DEB85 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		3AA4776C27CE921800603728 /* 51926-happy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "51926-happy.json"; path = "../../../computer studies/ArithmeticAce-ea06e02dfa02a78aa2d76ae1af57eaf0bd3f884e/ArithmeticAceSupplementary-028adac81957558aa98151c921bf7bd339b801bd/ArithmeticAce/Animations/51926-happy.json"; sourceTree = "<group>"; };
 		3AA4776E27CE922100603728 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "../../../computer studies/ArithmeticAce-ea06e02dfa02a78aa2d76ae1af57eaf0bd3f884e/ArithmeticAceSupplementary-028adac81957558aa98151c921bf7bd339b801bd/ArithmeticAce/Views/Helpers/LottieView.swift"; sourceTree = "<group>"; };
 		3AA4777327CE92EE00603728 /* ReactionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionAnimationView.swift; sourceTree = "<group>"; };
+		3AA4777527CE994A00603728 /* 2497-trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2497-trophy.json"; path = "../../../2497-trophy.json"; sourceTree = "<group>"; };
 		8134B14127CA4862004DEB85 /* FurryFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurryFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurryFriendsApp.swift; sourceTree = "<group>"; };
 		8134B14627CA4862004DEB85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8134B15727CA5B63004DEB85 /* Helpers */,
 				8134B14627CA4862004DEB85 /* ContentView.swift */,
 				3AA4776C27CE921800603728 /* 51926-happy.json */,
+				3AA4777527CE994A00603728 /* 2497-trophy.json */,
 				3AA4776E27CE922100603728 /* LottieView.swift */,
 			);
 			path = Views;
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA4777627CE994A00603728 /* 2497-trophy.json in Resources */,
 				8134B15627CA575E004DEB85 /* README.md in Resources */,
 				8134B14C27CA4863004DEB85 /* Preview Assets.xcassets in Resources */,
 				3AA4776D27CE921800603728 /* 51926-happy.json in Resources */,

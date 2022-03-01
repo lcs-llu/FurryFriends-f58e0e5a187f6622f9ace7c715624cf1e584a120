@@ -19,10 +19,17 @@ struct ContentView: View {
     @State var favourites: [DogImage] = []
     @State var currentImageAddedToFavourites: Bool = false
     
+    @State var score = 0
+    
     // MARK: Computed properties
     var body: some View {
         
         VStack {
+            
+            Text("Score: \(score)")
+                .bold()
+                .font(.title)
+            
             
             // Shows the main image
             RemoteImageView(fromURL: URL(string: currentImage.message)!)
@@ -33,6 +40,7 @@ struct ContentView: View {
                     if currentImageAddedToFavourites == false {
                         favourites.append(currentImage)
                         currentImageAddedToFavourites = true
+                        score += 5
                     }
                 }
                 .foregroundColor(currentImageAddedToFavourites == true ? .red : .secondary)
@@ -58,7 +66,7 @@ struct ContentView: View {
                 RemoteImageView(fromURL: URL(string: currentImage.message)!)
             }
             
-            ReactionAnimationView(reactionName: "51926-happy", ifFavourite: currentImageAddedToFavourites)
+            ReactionAnimationView(ifFavourite: currentImageAddedToFavourites, currentScore: score)
             
             Spacer()
         }

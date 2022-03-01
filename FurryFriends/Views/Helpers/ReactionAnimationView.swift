@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ReactionAnimationView: View {
-    let reactionName: String
     let ifFavourite: Bool
+    let currentScore: Int
     
     var body: some View {
-        LottieView(animationNamed: reactionName)
-            .opacity(ifFavourite == true ? 1.0 : 0.0)
-            .padding()
+        VStack {
+            LottieView(animationNamed: "51926-happy")
+                .opacity(ifFavourite == true ? 1.0 : 0.0)
+                .padding()
+            LottieView(animationNamed: "2497-trophy")
+                .opacity(currentScore == 100 ? 1.0 : 0.0)
+        }
 
     }
 }
 
 struct ReactionAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        ReactionAnimationView(reactionName: "51926-happy", ifFavourite: false)
+        ReactionAnimationView(ifFavourite: false, currentScore: 0)
     }
 }
