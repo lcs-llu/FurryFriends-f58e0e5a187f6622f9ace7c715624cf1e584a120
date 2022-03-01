@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3AA4776827CD41EF00603728 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4776727CD41EF00603728 /* DogImage.swift */; };
 		3AA4776B27CD8AB300603728 /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4776A27CD8AB300603728 /* SharedFunctionsAndConstants.swift */; };
+		3AA4776D27CE921800603728 /* 51926-happy.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA4776C27CE921800603728 /* 51926-happy.json */; };
+		3AA4776F27CE922100603728 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4776E27CE922100603728 /* LottieView.swift */; };
+		3AA4777227CE92BB00603728 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA4777127CE92BB00603728 /* Lottie */; };
+		3AA4777427CE92EE00603728 /* ReactionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4777327CE92EE00603728 /* ReactionAnimationView.swift */; };
 		8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */; };
 		8134B14727CA4862004DEB85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8134B14627CA4862004DEB85 /* ContentView.swift */; };
 		8134B14927CA4863004DEB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8134B14827CA4863004DEB85 /* Assets.xcassets */; };
@@ -20,6 +24,9 @@
 /* Begin PBXFileReference section */
 		3AA4776727CD41EF00603728 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 		3AA4776A27CD8AB300603728 /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
+		3AA4776C27CE921800603728 /* 51926-happy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "51926-happy.json"; path = "../../../computer studies/ArithmeticAce-ea06e02dfa02a78aa2d76ae1af57eaf0bd3f884e/ArithmeticAceSupplementary-028adac81957558aa98151c921bf7bd339b801bd/ArithmeticAce/Animations/51926-happy.json"; sourceTree = "<group>"; };
+		3AA4776E27CE922100603728 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "../../../computer studies/ArithmeticAce-ea06e02dfa02a78aa2d76ae1af57eaf0bd3f884e/ArithmeticAceSupplementary-028adac81957558aa98151c921bf7bd339b801bd/ArithmeticAce/Views/Helpers/LottieView.swift"; sourceTree = "<group>"; };
+		3AA4777327CE92EE00603728 /* ReactionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionAnimationView.swift; sourceTree = "<group>"; };
 		8134B14127CA4862004DEB85 /* FurryFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurryFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8134B14427CA4862004DEB85 /* FurryFriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurryFriendsApp.swift; sourceTree = "<group>"; };
 		8134B14627CA4862004DEB85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA4777227CE92BB00603728 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,8 @@
 			children = (
 				8134B15727CA5B63004DEB85 /* Helpers */,
 				8134B14627CA4862004DEB85 /* ContentView.swift */,
+				3AA4776C27CE921800603728 /* 51926-happy.json */,
+				3AA4776E27CE922100603728 /* LottieView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				8134B15327CA55F4004DEB85 /* RemoteImageView.swift */,
+				3AA4777327CE92EE00603728 /* ReactionAnimationView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -127,6 +138,9 @@
 			dependencies = (
 			);
 			name = FurryFriends;
+			packageProductDependencies = (
+				3AA4777127CE92BB00603728 /* Lottie */,
+			);
 			productName = FurryFriends;
 			productReference = 8134B14127CA4862004DEB85 /* FurryFriends.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 8134B13827CA4862004DEB85;
+			packageReferences = (
+				3AA4777027CE92BB00603728 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8134B14227CA4862004DEB85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,6 +188,7 @@
 			files = (
 				8134B15627CA575E004DEB85 /* README.md in Resources */,
 				8134B14C27CA4863004DEB85 /* Preview Assets.xcassets in Resources */,
+				3AA4776D27CE921800603728 /* 51926-happy.json in Resources */,
 				8134B14927CA4863004DEB85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,7 +204,9 @@
 				8134B15427CA55F4004DEB85 /* RemoteImageView.swift in Sources */,
 				3AA4776B27CD8AB300603728 /* SharedFunctionsAndConstants.swift in Sources */,
 				3AA4776827CD41EF00603728 /* DogImage.swift in Sources */,
+				3AA4777427CE92EE00603728 /* ReactionAnimationView.swift in Sources */,
 				8134B14527CA4862004DEB85 /* FurryFriendsApp.swift in Sources */,
+				3AA4776F27CE922100603728 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AA4777027CE92BB00603728 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AA4777127CE92BB00603728 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AA4777027CE92BB00603728 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8134B13927CA4862004DEB85 /* Project object */;
 }

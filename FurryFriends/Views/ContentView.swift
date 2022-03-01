@@ -58,6 +58,8 @@ struct ContentView: View {
                 RemoteImageView(fromURL: URL(string: currentImage.message)!)
             }
             
+            ReactionAnimationView(reactionName: "51926-happy", ifFavourite: currentImageAddedToFavourites)
+            
             Spacer()
         }
         .onChange(of: scenePhrase) { newPhase in
